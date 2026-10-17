@@ -10,9 +10,11 @@ async function fetchReadme(repo: string): Promise<string | null> {
     const md = await res.text()
     return md
       .replace(/^#\s+.*\n+/, '') // the page already shows the title
-      .replace(/(!?)\]\((?!https?:|#|mailto:)([^)]+)\)/g, (_, img, path) =>
-        `${img}](https://${img ? 'raw.githubusercontent.com' : 'github.com'}/${repo}/${img ? '' : 'blob/'}HEAD/${path.replace(/^\.?\//, '')})`
-      )
+      // Images (![alt](path)) point at the raw file; links ([text](path)) at GitHub's file view
+      .replace(/(!?)\[([^\]]*)\]\((?!https?:|#|mailto:)([^)]+)\)/g, (_, img, text, path) => {
+        const file = path.replace(/^\.?\//, '')
+        return `${img}[${text}](${img ? `https://raw.githubusercontent.com/${repo}/HEAD/${file}` : `https://github.com/${repo}/blob/HEAD/${file}`})`
+      })
   } catch {
     return null
   }

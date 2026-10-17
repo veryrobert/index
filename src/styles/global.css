@@ -112,8 +112,7 @@
     cursor: pointer;
     }
   html {
-    @apply font-sans antialiased;
-    font-size: 14px;
+    @apply font-sans antialiased; /* a page of text: the browser's own 16px base, unlike the apps' 14px */
     }
 }
 /* Horizontal rows that scroll without a visible bar (the tag filter) */

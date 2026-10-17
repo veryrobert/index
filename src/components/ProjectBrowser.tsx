@@ -105,19 +105,22 @@ export default function ProjectBrowser({ projects }: { projects: ProjectCard[] }
   return (
     <>
       <div className="mb-6 flex items-center gap-6">
+        {/* The tags scroll sideways inside their own space, so a long list never widens the page */}
+        <div className="no-scrollbar min-w-0 flex-1 overflow-x-auto">
         <ToggleGroup
           type="single"
           aria-label="Filter by tag"
           value={tag || 'all'}
           onValueChange={v => pickTag(v === 'all' || !v ? '' : v)}
           spacing={6}
-          className="no-scrollbar min-w-0 flex-1 overflow-x-auto"
+          className="w-max"
         >
           <ToggleGroupItem value="all" className={textToggle}>All</ToggleGroupItem>
           {tags.map(t => (
             <ToggleGroupItem key={t} value={t} className={cn(textToggle, 'shrink-0')}>{capitalise(t)}</ToggleGroupItem>
           ))}
         </ToggleGroup>
+        </div>
 
         <div className="flex shrink-0 items-center gap-4">
           <DropdownMenu>

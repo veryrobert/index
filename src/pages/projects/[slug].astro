@@ -23,15 +23,15 @@ const { title, description, tags, repo } = project.data
   <div class="grid grid-cols-1 lg:grid-cols-[1fr_200px] gap-16">
 
     <article>
-      <h1 class="text-4xl md:text-5xl font-medium leading-tight tracking-tight mb-4 max-w-2xl">{title}</h1>
-      {description && <p class="text-base text-muted-foreground mb-6 max-w-2xl">{description}</p>}
+      <h1 class="text-3xl md:text-5xl font-medium leading-tight tracking-tight mb-4 max-w-2xl">{title}</h1>
+      {description && <p class="text-sm sm:text-base text-muted-foreground mb-6 max-w-2xl">{description}</p>}
       <a href={projectHref(project)} data-local={project.data.local} class="inline-block text-sm text-foreground hover:text-foreground/70 transition-colors mb-12">
         Open <span data-host>{projectHost(project)}</span> ↗
       </a>
 
-      <div class="prose prose-invert max-w-2xl
+      <div class="prose prose-sm sm:prose-base prose-invert max-w-2xl
         prose-headings:font-medium prose-headings:tracking-tight
-        prose-p:text-foreground/80 prose-p:leading-relaxed prose-p:text-base
+        prose-p:text-foreground/80 prose-p:leading-relaxed
         prose-a:text-foreground prose-a:underline prose-a:underline-offset-2
         prose-li:text-foreground/80
         prose-strong:text-foreground prose-strong:font-medium">
