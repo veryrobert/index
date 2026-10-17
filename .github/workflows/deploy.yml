@@ -20,6 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: withastro/action@v3
+        with:
+          node-version: 24 # Astro 7 needs Node 22.12 or newer
   deploy:
     needs: build
     runs-on: ubuntu-latest
