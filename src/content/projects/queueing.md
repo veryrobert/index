@@ -1,7 +1,7 @@
 ---
 title: queueing
 description: A physics-based queue visualiser.
-url: https://queueing.robertfarrelly.com
+url: https://veryrobert.github.io/queueing/
 local: https://queue.test
 repo: veryrobert/queueing
 tags: [visualisation]
