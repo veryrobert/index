@@ -1,0 +1,12 @@
+---
+import { getProjects, projectHref } from '../lib/projects'
+
+const projects = await getProjects()
+const currentPath = Astro.url.pathname
+---
+<aside class="hidden md:flex flex-col fixed left-0 top-12 bottom-0 w-48 px-6 gap-1 overflow-y-auto pt-[5.75rem]">
+  <a href="/" class={`text-sm py-0.5 transition-colors ${currentPath === '/' ? 'text-foreground' : 'text-muted-foreground hover:text-foreground/80'}`}>All</a>
+  {projects.map(p => (
+    <a href={projectHref(p)} data-local={p.data.local} class="text-sm py-0.5 text-muted-foreground hover:text-foreground/80 transition-colors">{p.data.title}</a>
+  ))}
+</aside>

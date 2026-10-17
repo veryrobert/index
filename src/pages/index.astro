@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro'
+import ProjectBrowser from '../components/ProjectBrowser'
+import { getProjects, toCard } from '../lib/projects'
+
+const projects = (await getProjects()).map(toCard)
+---
+
+<Base title="Index">
+  <h1 class="mb-4 text-3xl font-medium tracking-tight">Projects</h1>
+  <ProjectBrowser client:load projects={projects} />
+</Base>
