@@ -1,13 +1,14 @@
 # Change Log
 
-## 2026-10-17 — Fix the deploy
-- Build with Node 24 in GitHub Actions: Astro 7 needs Node 22.12 or newer (the first deploy failed on Node 20)
-- Pushed alongside: loom README screenshot and centred desktop layout; cards, flkty and starter phone layout
+## 2026-10-18 — stacker textures
+- stacker's card mentions textures and blend modes
+- Pushed alongside: stacker texture layers (multiply, overlay, soft, screen), loaded scans, per-piece textures, saturation/contrast/brightness, finer halftone
 
-## 2026-10-17 — First push: the index
-- Overview of code experiments as markdown files, each linking out to its app; READMEs pulled from GitHub
-- Project browser on shadcn/ui: tag filter, sort, grid/list; gradient placeholders or screenshots
-- Same theme as the apps; when viewed locally, links go to each project's .test site
-- Astro 7 with React
-- Geist as the interface font (shadcn's typeface), Helvetica Neue as fallback
-- queueing links to veryrobert.github.io/queueing until it has its own subdomain
+## 2026-10-18 — Add stacker
+- stacker on the index, linking to stacker.robertfarrelly.com (local: stacker.test)
+- Pushed alongside: stacker's first push, and loom's port branch going live
+
+## 2026-10-17 — Phone layout and README images
+- Fits a phone: the main column can shrink, tags scroll in their own space
+- 16px base type (was the apps' 14px), smaller headings and readme text on phones
+- README images load (they pointed at GitHub's file viewer)

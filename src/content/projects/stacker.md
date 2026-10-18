@@ -1,6 +1,6 @@
 ---
 title: stacker
-description: Collages from photos, colour and marks, with a printed feel.
+description: Collages from photos, colour and marks, with textures, blend modes and a printed feel.
 url: https://stacker.robertfarrelly.com
 local: https://stacker.test
 repo: veryrobert/stacker
