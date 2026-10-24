@@ -1,5 +1,8 @@
 # Change Log
 
+## 2026-10-24 — Cards without addresses
+- Cards no longer show the site's address under the description; the title still links to it
+
 ## 2026-10-24 — Add community
 - community on the index, linking to community.robertfarrelly.com (local: community.test); its notes come from the repo README
 

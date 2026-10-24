@@ -30,7 +30,6 @@ function Card({ p, view, local }: { p: ProjectCard; view: View; local: boolean }
   const list = view === 'list'
   // Viewed locally, links go to the project's local .test site
   const href = local && p.local ? p.local : p.href
-  const host = new URL(href).host
   return (
     <article className={cn('group', list && 'flex items-center gap-5')}>
       <a href={href} className={cn('block', list && 'shrink-0')} tabIndex={-1} aria-hidden>
@@ -51,7 +50,6 @@ function Card({ p, view, local }: { p: ProjectCard; view: View; local: boolean }
         {p.description && <p className="text-xs text-muted-foreground">{p.description}</p>}
         <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground/70">
           {p.tags.map(t => <span key={t}>{capitalise(t)}</span>)}
-          <span>{host}</span>
           {p.notes && (
             <a href={`/projects/${p.id}`} className="transition-colors hover:text-foreground">Readme</a>
           )}
