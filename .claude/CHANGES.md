@@ -1,5 +1,8 @@
 # Change Log
 
+## 2026-10-24 — Add community
+- community on the index, linking to community.robertfarrelly.com (local: community.test); its notes come from the repo README
+
 ## 2026-10-18 — kaleidoscope renamed tessera
 - The card is now tessera, linking to tessera.robertfarrelly.com (local: tessera.test)
 - Pushed alongside: the tessera rename
