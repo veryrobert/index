@@ -1,5 +1,8 @@
 # Change Log
 
+## 2026-10-25 — community links to its demo
+- The community card links to community.robertfarrelly.com/demo, the sample-data demo, since the site itself is invite-only
+
 ## 2026-10-24 — Cards without addresses
 - Cards no longer show the site's address under the description; the title still links to it
 
